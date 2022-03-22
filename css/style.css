@@ -25,6 +25,7 @@ body {
   padding: 17px 22px;
   text-transform: uppercase;
   font-size: 12px;
+  background-color: #fff;
   font-family: 'Proxima Nova Semibold', sans-serif;
 }
 
@@ -35,6 +36,12 @@ body {
   background-color: #507fe1;
   color: white;
   font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+  .button-0 {
+    font-size: 10px;
+  }
 }
 
 .navbar {
@@ -88,8 +95,8 @@ body {
   background-color: #507fe1;
   -webkit-transform: .2s;
           transform: .2s;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
 }
 
 .menu_active {
@@ -160,6 +167,30 @@ body {
   color: #7b7b79;
 }
 
+@media screen and (max-width: 991px) {
+  .navbar__mobile, .navbar__landline {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo {
+    display: none;
+  }
+  .menu-button {
+    height: 60px;
+  }
+  .menu__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu__link {
+    margin-bottom: 20px;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -168,6 +199,25 @@ body {
 .container {
   max-width: 1170px;
   margin: auto;
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 }
 
 .hero {
@@ -188,5 +238,12 @@ body {
   font-size: 30px;
   font-family: 'Proxima Nova Semibold', sans-serif;
   margin-bottom: 67px;
+}
+
+@media screen and (max-width: 991px) {
+  .hero {
+    background-size: cover;
+    background-position: top left 30%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
