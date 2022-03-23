@@ -1,0 +1,53 @@
+.about-row-one
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 40px
+  .about-title
+    color: black
+    font-size: 24px
+    +bold
+  .about-link
+    text-decoration: none
+    font-size: 16px
+    color: $primary
+    &:hover
+      border-bottom: 2px solid $primary
+.about-row-two
+  display: flex      
+  justify-content: space-between
+  .about-row-item
+    text-align: center
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .1)
+    span
+      display: block
+      padding: 25px
+@media screen and ( max-width: 1199px )
+  .about-row-item
+    flex-basis: 24%
+@media screen and ( max-width: 768px )  
+  .about-row-one
+    justify-content: space-around 
+    .about-title
+      font-size: 20px
+  .about-row-two
+    flex-wrap: wrap
+    justify-content: space-around
+  .about-row-item
+    flex-basis: auto
+    margin-bottom: 30px
+@media screen and ( max-width: 610px )     
+  .about-row-one
+    justify-content: center
+    .about-title
+      display: none
+    .about-link
+      padding-right: 10px
+  .about-row-two
+    flex-wrap: wrap
+    justify-content: space-around  
+    .about-row-item
+      flex-basis: 100%
+      margin-bottom: 30px
+    
+        

@@ -623,6 +623,108 @@ input[type="checkbox"]:checked + label:before {
   }
 }
 
+.about-row-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.about-row-one .about-title {
+  color: black;
+  font-size: 24px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.about-row-one .about-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #507fe1;
+}
+
+.about-row-one .about-link:hover {
+  border-bottom: 2px solid #507fe1;
+}
+
+.about-row-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-row-two .about-row-item {
+  text-align: center;
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-row-two .about-row-item span {
+  display: block;
+  padding: 25px;
+}
+
+@media screen and (max-width: 1199px) {
+  .about-row-item {
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-row-one {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .about-row-one .about-title {
+    font-size: 20px;
+  }
+  .about-row-two {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .about-row-item {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .about-row-one {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about-row-one .about-title {
+    display: none;
+  }
+  .about-row-one .about-link {
+    padding-right: 10px;
+  }
+  .about-row-two {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .about-row-two .about-row-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+}
+
 .discount {
   padding: 129px 0;
 }
