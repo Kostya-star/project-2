@@ -100,6 +100,8 @@ input[type="checkbox"]:checked + label:before {
   }
   .section {
     padding: 60px 0;
+  }
+  .section-title {
     font-size: 22px;
   }
 }
@@ -486,5 +488,44 @@ input[type="checkbox"]:checked + label:before {
   margin-left: 40px;
   color: #596164;
   font-size: 17px;
+}
+
+@media screen and (max-width: 1199px) {
+  .form__subtitle {
+    width: 230px;
+    margin-left: 40px;
+    color: #596164;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .discount__block {
+    background: white url(../img/discount-bg.jpg) no-repeat center right -30%;
+    background-size: contain;
+  }
+  .discount__subtitle {
+    display: block;
+    width: 85%;
+    font-size: 18px;
+  }
+  .form__subtitle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .discount__block {
+    background-image: none;
+    padding: 40px;
+  }
+  .discount__title {
+    font-size: 20px;
+  }
+  .discount__subtitle {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
