@@ -19,6 +19,10 @@ body {
   color: #262626;
 }
 
+img {
+  max-width: 100%;
+}
+
 .section {
   padding: 100px 0;
 }
@@ -41,6 +45,7 @@ body {
   text-transform: uppercase;
   font-size: 12px;
   background-color: #fff;
+  text-decoration: none;
   font-family: 'Proxima Nova Semibold', sans-serif;
 }
 
@@ -52,6 +57,7 @@ body {
   color: white;
   font-family: 'Proxima Nova Semibold', sans-serif;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .bg-secondary {
@@ -455,6 +461,168 @@ input[type="checkbox"]:checked + label:before {
   }
 }
 
+.catalog {
+  background-color: #f5f6f8;
+}
+
+.catalog-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.catalog-card {
+  position: relative;
+  max-width: 590px;
+  -webkit-box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+          box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-card img {
+  height: 100%;
+}
+
+.catalog-card__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.catalog-card__buttons .button-fitting {
+  padding: 10px;
+  text-transform: uppercase;
+  color: #507fe1;
+  background-color: #fff;
+  border: none;
+  font-size: 15px;
+}
+
+.catalog-card__buttons .button-add {
+  padding: 10px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #507fe1;
+  border: none;
+  font-size: 15px;
+}
+
+.catalog-card__buttons .button-like {
+  background-color: #507fe1;
+  border: none;
+}
+
+.catalog-card__buttons .button-like img {
+  height: 30px;
+}
+
+.catalog .tag {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(80, 127, 225, 0.6);
+  font-size: 12px;
+  padding: 10px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.catalog__link {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.catalog__link-more {
+  display: inline-block;
+}
+
+.catalog__link__text {
+  display: block;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 991px) {
+  .catalog-card__buttons .button-fitting {
+    padding: 2;
+    font-size: 12px;
+  }
+  .catalog-card .button-add {
+    padding: 2;
+    font-size: 12px;
+  }
+  .catalog-card .button-like {
+    padding: 2;
+    font-size: 12px;
+  }
+  .catalog .tag {
+    font-size: 13px;
+    padding: 4px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .catalog {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .catalog-block {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .catalog-card__buttons .button-fitting {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .catalog-card__buttons .button-add {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .catalog-card__buttons .button-fitting {
+    padding: 2;
+    font-size: 12px;
+  }
+  .catalog-card__buttons .button-add {
+    padding: 2;
+    font-size: 12px;
+  }
+  .catalog-card__buttons .button-like {
+    padding: 2;
+    font-size: 12px;
+  }
+  .catalog .tag {
+    font-size: 13px;
+    padding: 4px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .catalog-card__buttons .button-fitting {
+    padding: 1;
+    font-size: 9px;
+  }
+  .catalog-card__buttons .button-add {
+    padding: 1;
+    font-size: 9px;
+  }
+  .catalog-card__buttons .button-like {
+    opacity: 0.75;
+  }
+  .catalog .tag {
+    display: none;
+  }
+}
+
 .discount {
   padding: 129px 0;
 }
@@ -463,10 +631,6 @@ input[type="checkbox"]:checked + label:before {
   background: white url(../img/discount-bg.jpg) no-repeat center right;
   background-size: contain;
   padding: 80px;
-}
-
-.discount__block {
-  border: 1px solid red;
 }
 
 .discount__title {

@@ -1,0 +1,119 @@
+.catalog
+  background-color: #f5f6f8
+  &-block
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 20px
+  &-card
+    position: relative
+    max-width: 590px
+    box-shadow: 7px 5px 21px rgba(0, 0, 0, .1)
+    img
+      height: 100%
+    &__buttons
+      display: flex
+      position: absolute
+      right: 0
+      bottom: 0
+      .button-fitting
+        padding: 10px
+        text-transform: uppercase
+        color: $primary
+        background-color: #fff
+        border: none
+        font-size: 15px
+      .button-add
+        padding: 10px
+        text-transform: uppercase
+        color: white
+        background-color: $primary
+        border: none
+        font-size: 15px  
+      .button-like
+        background-color: $primary  
+        border: none
+        img
+          height: 30px
+
+  .tag
+    position: absolute
+    z-index: 1
+    top: 10px
+    left: 10px
+    color: white
+    background-color: rgba(80, 127, 225, 0.6)
+    font-size: 12px
+    padding: 10px
+    +bold
+  &__link
+    margin-top: 60px
+    text-align: center
+    &-more
+      display: inline-block
+    &__text
+      display: block
+      margin-top: 15px
+@media screen and ( max-width: 991px )
+  .catalog
+    &-card
+      &__buttons
+        .button-fitting
+          padding: 2
+          font-size: 12px
+      .button-add
+        padding: 2
+        font-size: 12px
+      .button-like
+        padding: 2
+        font-size: 12px
+    .tag
+      font-size: 13px
+      padding: 4px  
+@media screen and ( max-width: 768px )
+  .catalog
+    &-block
+      display: grid
+      grid-template-columns: 1fr   
+      justify-items: center
+    &-card
+      &__buttons
+        .button-fitting
+          padding: 10px
+          font-size: 15px
+        .button-add
+          padding: 10px
+          font-size: 15px  
+        .button-like
+    .tag
+    font-size: 12px
+    padding: 10px  
+@media screen and ( max-width: 425px )
+  .catalog
+    &-card
+      &__buttons
+        .button-fitting
+          padding: 2
+          font-size: 12px
+        .button-add
+          padding: 2
+          font-size: 12px
+        .button-like
+          padding: 2
+          font-size: 12px
+    .tag
+      font-size: 13px
+      padding: 4px      
+@media screen and ( max-width: 325px )   
+  .catalog
+    &-card
+      &__buttons
+        .button-fitting
+          padding: 1
+          font-size: 9px
+        .button-add
+          padding: 1
+          font-size: 9px
+        .button-like
+          opacity: 0.75
+    .tag
+      display: none        
