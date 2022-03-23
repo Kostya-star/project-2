@@ -19,6 +19,21 @@ body {
   color: #262626;
 }
 
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.section__title {
+  margin-bottom: 100px;
+}
+
 .button-o {
   border: 2px solid #507fe1;
   color: #507fe1;
@@ -79,9 +94,13 @@ input[type="checkbox"]:checked + label:before {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 576px) {
   .button-0 {
     font-size: 10px;
+  }
+  .section {
+    padding: 60px 0;
+    font-size: 22px;
   }
 }
 
@@ -394,5 +413,78 @@ input[type="checkbox"]:checked + label:before {
   .form__input {
     margin-bottom: 20px;
   }
+}
+
+.features-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.features-block__item {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.features-block__item img {
+  width: 70px;
+  height: 70px;
+}
+
+@media screen and (max-width: 991px) {
+  .features-block__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .features-block__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+.discount {
+  padding: 129px 0;
+}
+
+.discount__block {
+  background: white url(../img/discount-bg.jpg) no-repeat center right;
+  background-size: contain;
+  padding: 80px;
+}
+
+.discount__block {
+  border: 1px solid red;
+}
+
+.discount__title {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  margin-bottom: 20px;
+}
+
+.discount__subtitle {
+  display: block;
+  width: 610px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.form__subtitle {
+  width: 390px;
+  margin-left: 40px;
+  color: #596164;
+  font-size: 17px;
 }
 /*# sourceMappingURL=style.css.map */
