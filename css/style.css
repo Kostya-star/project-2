@@ -423,6 +423,21 @@ input[type="checkbox"]:checked + label:before {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .form__row-checkbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .form__checkbox {
+    margin-bottom: 20px;
+  }
+}
+
 .features-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -566,10 +581,6 @@ input[type="checkbox"]:checked + label:before {
 }
 
 @media screen and (max-width: 768px) {
-  .catalog {
-    font-size: 12px;
-    padding: 10px;
-  }
   .catalog-block {
     display: -ms-grid;
     display: grid;
@@ -584,6 +595,16 @@ input[type="checkbox"]:checked + label:before {
   .catalog-card__buttons .button-add {
     padding: 10px;
     font-size: 15px;
+  }
+  .catalog .tag {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .catalog__link {
+    margin-top: 30px;
+  }
+  .catalog__link__text {
+    font-size: 14px;
   }
 }
 
@@ -722,6 +743,101 @@ input[type="checkbox"]:checked + label:before {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-bottom: 30px;
+  }
+}
+
+.price {
+  background-color: #f5f6f8;
+}
+
+.price .price-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.price .price-block .price-item {
+  position: relative;
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.price .price-block .price-item .price-img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.price .price-block .price-item .price-img-wrap .price-img-text {
+  font-size: 16px;
+}
+
+.price .price-block .price-item .price-img-wrap .price-img-pricing {
+  font-size: 16px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.price .price-block .price-item .price-button {
+  text-align: center;
+  position: absolute;
+  height: 80px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+  z-index: -1;
+  background-color: #fff;
+}
+
+.price .price-block .price-item:hover .price-button {
+  z-index: 1;
+  bottom: -80px;
+}
+
+@media screen and (max-width: 1199px) {
+  .price {
+    background-color: #f5f6f8;
+  }
+  .price .price-block {
+    max-width: 850px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .price .price-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .price .price-block .price-item {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .price .price-block {
+    margin-top: -50px;
+  }
+  .price .price-block .price-item {
+    margin: 10px;
   }
 }
 
