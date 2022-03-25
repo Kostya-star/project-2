@@ -1,0 +1,45 @@
+.contacts
+  background-color: #f1f1f1
+  padding-bottom: 0
+  &__wrap
+    display: flex
+    justify-content: space-around
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__img
+      width: 30px
+      height: 30px 
+      margin-bottom: 20px
+    &__link  
+      text-decoration: none
+      color: inherit
+      font-size: 18px
+    &__address
+      font-size: 18px  
+  &__map
+    display: flex
+    justify-content: center
+    margin-top: 50px
+    background-color: #fff
+@media screen and ( max-width: 768px )
+  .contacts
+    &__wrap
+      display: flex
+      flex-direction: column
+    &__item
+      margin-bottom: 30px 
+    &__section__title   
+      margin-bottom: 50px
+@media screen and ( max-width: 375px )  
+  .contacts
+    &__item
+      &__link
+        font-size: 16px
+      &__address   
+        font-size: 16px 
+    
+
+      
+      

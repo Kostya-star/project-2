@@ -45,17 +45,32 @@
         margin-bottom: 25px
         font-size: 18px
         +bold
-        &:before
+        &__last
+          &::before
+            display: none
+        &::before
           content: ''
           height: 2px
-          width: 170px
+          width: 168px
           background-color: rgba(#7b7e78, 0.3)
           position: absolute
-          display: block
           top: 35%
-          right: -109px
+          right: -108px
       .steps-text
         width: 160px  
+@media screen and ( max-width: 1199px )
+  .steps
+    .steps-wrap
+      .steps-item
+        .steps-title
+          &::before
+            content: ''
+            height: 2px
+            width: 126px
+            background-color: rgba(#7b7e78, 0.3)
+            position: absolute
+            top: 35%
+            right: -64px
 @media screen and ( max-width: 991px )
   .steps
     .steps-wrap
@@ -83,4 +98,8 @@
     .steps-wrap    
       .steps-item
         flex-basis: 100%  
-        margin-bottom: 50px        
+        margin-bottom: 50px 
+
+
+
+
