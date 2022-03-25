@@ -456,10 +456,6 @@ input[type="checkbox"]:checked + label:before {
   margin-bottom: 100px;
 }
 
-.features-block__item:last-child {
-  background-color: green;
-}
-
 .features-block__item img {
   width: 70px;
   height: 70px;
@@ -674,7 +670,8 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .about-row-one .about-link:hover {
-  border-bottom: 2px solid #507fe1;
+  border-bottom: 1.5px solid #507fe1;
+  margin-top: 2px;
 }
 
 .about-row-two {
@@ -1283,6 +1280,169 @@ input[type="checkbox"]:checked + label:before {
   }
   .contacts__item__address {
     font-size: 16px;
+  }
+}
+
+.footer {
+  background-color: #0d0d0d;
+  padding: 40px 0;
+  color: #fff;
+}
+
+.footer__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.footer__group {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+}
+
+.footer__title {
+  font-size: 18px;
+  margin: 2px 0;
+  letter-spacing: 1px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.footer__subtitle {
+  font-size: 14px;
+}
+
+.footer__payments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+}
+
+.footer__payments-group-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.footer__payments-group-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.footer__payments__img {
+  width: 60px;
+  height: 60px;
+}
+
+.footer__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+}
+
+.footer__contacts__tel {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.footer__contacts__email {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__contacts__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__contacts__socials__item {
+  width: 25px;
+  height: 25px;
+  list-style: none;
+  margin-left: 25px;
+}
+
+@media screen and (max-width: 991px) {
+  .footer__title {
+    font-size: 16px;
+  }
+  .footer__subtitle {
+    font-size: 12px;
+  }
+  .footer__contacts__tel {
+    font-size: 16px;
+  }
+  .footer__contacts__email {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__contacts__socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    padding: 0;
+  }
+  .footer__contacts__socials__item {
+    margin-right: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
