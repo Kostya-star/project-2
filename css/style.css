@@ -982,6 +982,7 @@ input[type="checkbox"]:checked + label:before {
 
 .feedback {
   background-color: #f1f1f1;
+  padding-bottom: 383px;
 }
 
 .feedback__wrap {
@@ -1004,6 +1005,8 @@ input[type="checkbox"]:checked + label:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }
 
 .feedback__item__text {
@@ -1018,7 +1021,20 @@ input[type="checkbox"]:checked + label:before {
   max-width: 365px;
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.feedback__item__text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 46%;
+  border: 15px solid transparent;
+  border-top: 20px solid white;
+}
+
+.feedback__item__text__second {
+  margin-top: 0;
 }
 
 .feedback__item__image {
@@ -1040,14 +1056,43 @@ input[type="checkbox"]:checked + label:before {
   color: #262626;
 }
 
+@media screen and (max-width: 991px) {
+  .feedback__item__text__second {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feedback__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .feedback__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 40px;
+  }
+}
+
 .discount {
   padding: 129px 0;
+  padding-bottom: 0;
 }
 
 .discount__block {
   background: white url(../img/discount-bg.jpg) no-repeat center right;
   background-size: contain;
   padding: 80px;
+  -webkit-box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+          box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+  margin-top: -383px;
 }
 
 .discount__title {
@@ -1107,6 +1152,38 @@ input[type="checkbox"]:checked + label:before {
     display: block;
     width: 100%;
     font-size: 16px;
+  }
+}
+
+.production {
+  padding: 50px 0;
+}
+
+.production__wrap {
+  padding: 0 20px;
+}
+
+.production__image {
+  float: left;
+  margin-right: 50px;
+  margin-bottom: 25px;
+}
+
+.production__text {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .production__image {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .production__text {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */
