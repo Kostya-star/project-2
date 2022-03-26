@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/twentytwenty.css">
   <title>Фабрика</title>
 </head>
 <body>
@@ -373,6 +374,43 @@
       </div>
     </section>
 
+    <section class="section before">
+      <div class="container">
+        <h2 class="section-title section__title">До и после</h2>
+        <div class="before-slider-wrap">
+          <div class="before-slider">
+            <div class="before-slider__item">
+              <div class="before-after">
+                <img src="img\before-before.png" alt="">
+                <img src="img\before-after.png" alt="">
+              </div>
+            </div>
+            <div class="before-slider__item">
+              <div class="before-after">
+                <img src="img\before-before.png" alt="">
+                <img src="img\before-after.png" alt="">
+              </div>
+            </div>
+            <div class="before-slider__item">
+              <div class="before-after">
+                <img src="img\before-before.png" alt="">
+                <img src="img\before-after.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="before-slider-arrows">
+            <button class="arrow arrow-left">
+              <img src="img/arrow-left.png" alt="arrow-left">
+            </button>
+            <button class="arrow arrow-right">
+              <img src="img/arrow-right.png" alt="arrow-right">
+            </button>
+          </div>
+        </div>
+        <!-- /.before-slider-wrap -->
+      </div>
+    </section>
+
     <section class="section feedback">
       <div class="container">
         <h2 class="section-title section__title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
@@ -502,6 +540,25 @@
 
   </main>
 
-  <!-- <script type="text/javascript" src="https://spikmi.org/Widget?Id=8345"></script> -->
+  <script type="text/javascript" src="https://spikmi.org/Widget?Id=8345"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js".></script>
+  <script src="js/jquery.event.move.js"></script>
+  <script src="js/jquery.twentytwenty.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script>
+    $(window).load(function() {
+      $(".before-after").twentytwenty({
+        before_label: 'Без скинали', // Set a custom before label
+        after_label: 'Со скинали' // Set a custom after label
+      });
+      $('.before-slider').slick({
+        draggable: false,
+        dots: true,
+        dotsClass: 'before-slider__dots',
+        prevArrow: $('.arrow-left'),
+        nextArrow: $('.arrow-right')
+      });
+    });
+  </script>
 </body>
 </html>
