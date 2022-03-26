@@ -4,6 +4,7 @@
   top: 0
   width: 100%
   background-color: #fff
+  z-index: 100
   &-wrap
     display: flex
     align-items: center
@@ -34,6 +35,7 @@
   transform: .2s
   transform: translateY(-200%)
   opacity: 0
+  z-index: 100
   &_active
     transform: translateX(0)
     opacity: 1
@@ -57,7 +59,10 @@
     border-left: 1px solid rgba(#510bba, 0.1)
     height: 80px
     width: 70px
-    cursor: pointer
+    &:hover
+      cursor: pointer
+    &:focus
+      outline: none
     &__line
       display: block
       width: 20px

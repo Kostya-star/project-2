@@ -180,6 +180,60 @@ input[type="checkbox"]:checked + label:before {
   background-color: #507fe1;
 }
 
+.select {
+  height: 80px;
+  width: 100%;
+  padding-left: 30px;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.select::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/arrow-down.png") no-repeat center;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.select:hover {
+  cursor: pointer;
+}
+
+.select_checked {
+  line-height: 80px;
+  padding-left: 30px;
+}
+
+.select__dropdown {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+
+.select__dropdown_open {
+  display: block;
+}
+
+.select__option {
+  padding: 20px;
+}
+
+.select__option:hover {
+  background-color: #f5f6f8;
+}
+
 .checkbox-label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -220,6 +274,7 @@ input[type="checkbox"]:checked + label:before {
   top: 0;
   width: 100%;
   background-color: #fff;
+  z-index: 100;
 }
 
 .navbar-wrap {
@@ -268,6 +323,7 @@ input[type="checkbox"]:checked + label:before {
   -webkit-transform: translateY(-200%);
           transform: translateY(-200%);
   opacity: 0;
+  z-index: 100;
 }
 
 .menu_active {
@@ -314,7 +370,14 @@ input[type="checkbox"]:checked + label:before {
   border-left: 1px solid rgba(81, 11, 186, 0.1);
   height: 80px;
   width: 70px;
+}
+
+.menu-button:hover {
   cursor: pointer;
+}
+
+.menu-button:focus {
+  outline: none;
 }
 
 .menu-button__line {
@@ -595,13 +658,14 @@ input[type="checkbox"]:checked + label:before {
   max-width: 590px;
   -webkit-box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
           box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
 }
 
 .catalog-card img {
   height: 100%;
 }
 
-.catalog-card:hover.catalog-card__buttons {
+.catalog-card:hover .catalog-card__buttons {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
@@ -1126,8 +1190,8 @@ input[type="checkbox"]:checked + label:before {
   position: absolute;
   top: 50%;
   z-index: 0;
-  -webkit-transform: translateY(280%);
-          transform: translateY(280%);
+  -webkit-transform: translateY(160%);
+          transform: translateY(160%);
 }
 
 .before-slider__dots {
@@ -1179,8 +1243,8 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .arrow-left {
-  -webkit-transform: translateX(150%);
-          transform: translateX(150%);
+  -webkit-transform: translateX(-130%);
+          transform: translateX(-130%);
 }
 
 .arrow-left:hover {
@@ -1188,8 +1252,8 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .arrow-right {
-  -webkit-transform: translateX(-150%);
-          transform: translateX(-150%);
+  -webkit-transform: translateX(130%);
+          transform: translateX(130%);
 }
 
 .arrow-right:hover {

@@ -8,10 +8,11 @@
     position: relative
     max-width: 590px
     box-shadow: 7px 5px 21px rgba(0, 0, 0, .1)
+    overflow-y: hidden
     img
       height: 100%
     &:hover
-      &.catalog-card__buttons
+      .catalog-card__buttons
         transform: translateY(0)
         opacity: 1
     &__buttons
@@ -19,7 +20,7 @@
       position: absolute
       right: 0
       bottom: 0
-      transition: 0.2s
+      transition: 0.2s 
       opacity: 0
       transform: translateY(100%)
       .button-fitting
